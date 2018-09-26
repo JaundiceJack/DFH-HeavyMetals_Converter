@@ -4,6 +4,10 @@ from PyQt5.QtGui import QIntValidator, QDoubleValidator
 from PyQt5.QtCore import QCoreApplication
 from Interface import Ui_Dialog
 
+#convert_to_double takes a string
+#if the string is a float, the text is returned as a float.
+#if the string was not a number, an exception is raised.
+#if the string was empty, 0 is returned.
 def convert_to_double(text):
     if text != '':
         try:
@@ -16,7 +20,9 @@ def convert_to_double(text):
     else:
         return 0
     
-        
+#get_conversion takes two Q-input fields
+#the text is converted to a double
+#the serving is multiplied by 0.001  
 def get_conversion(field, serving):
     value1 = convert_to_double(field.text())
     value2 = convert_to_double(serving.text())
