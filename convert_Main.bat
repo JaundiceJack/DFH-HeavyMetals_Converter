@@ -1,0 +1,1 @@
+CALL C:\Users\JMCNEILAN\Documents\Projects\Python\DFH_Integra\UI\interfaces\pyuic5.bat -x Interface.ui -o Interface.py
